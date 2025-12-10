@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+</head>
+<style>
+    body {
+        background-color: rgb(42, 226, 246);
+        text-align: center;
+    }  
+</style>
+
+<body>
+     <h2>Application form</h2>
+        <form action="/submit" method="POST">
+            <label for="name" style="margin-right: 8%">Name:</label><br> 
+            <input type="text" id="name" name="name"><br>
+            <label for="email" style="margin-right: 8%">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="place" style="margin-right: 8%">Place:</label><br>
+            <input type="text" id="place" name="place"><br>
+            <label for="gender" style="margin-left: 2%;">Gender:</label>
+            <input type="radio" id="male" name="gender" checked value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+</body>
+</html>
