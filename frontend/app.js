@@ -3,7 +3,8 @@ var bodyParser = require('body-parser');
 var app = express(); 
 var path = require ('path');
 
-var URL = "http://backend-host:8000/submit";
+require('dotenv').config();
+var URL = process.env.BACKEND_URL;
 
 const fetch = (...args) =>
   import("node-fetch").then(({ default: fetch }) => fetch(...args));
