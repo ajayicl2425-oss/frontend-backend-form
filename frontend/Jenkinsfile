@@ -1,9 +1,6 @@
 pipeline {
     agent any
 
-      tools {
-        nodejs 'node-18'
-    }
 
     stages {
 
@@ -17,6 +14,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 dir('frontend') {
+                    echo "${pwd()}"
                     sh 'npm install'
                 }
             }
