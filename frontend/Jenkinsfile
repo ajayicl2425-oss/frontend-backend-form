@@ -14,7 +14,8 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 dir('frontend') {
-                    echo "${pwd()}"
+                    echo "list:${pwd()}"
+                    sh 'ls-R'
                     sh 'npm install'
                 }
             }
