@@ -6,16 +6,13 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main',
-                   url: 'https://github.com/ajayicl2425-oss/frontend-backend-form.git'
+                checkout scm
             }
         }
 
         stage('Install Dependencies') {
             steps {
                 dir('frontend') {
-                    echo "list:${pwd()}"
-                    sh 'ls'
                     sh 'npm install'
                 }
             }
