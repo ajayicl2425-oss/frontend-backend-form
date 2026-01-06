@@ -8,8 +8,9 @@ result = []
 @app.route('/submit', methods=['POST'])
 def submit():
     
-    data = request.get_json()
-    result.append(data)
+        data = request.get_json()
+        result.append(data)
+        
    
 @app.route('/display', methods=['GET'])
 def display():
