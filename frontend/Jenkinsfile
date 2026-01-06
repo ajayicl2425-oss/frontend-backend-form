@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                   url: 'https://github.com/ajayicl2425-oss/frontend-backend-form.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh '''
+                cd frontend
+                npm install
+                '''
+            }
+        }
+
+        stage('start app') {
+            steps {
+                sh 'npm start'
+            }
+        }
+
+    }
+}
