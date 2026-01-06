@@ -4,10 +4,10 @@ pipeline {
     stages {
 
         stage('Checkout') {
-            steps {
-                url: 'https://github.com/ajayicl2425-oss/frontend-backend-form.git'
-            }
-        }
+          steps {
+            checkout scm
+                }
+           }
 
         stage('Install Dependencies') {
             steps {
