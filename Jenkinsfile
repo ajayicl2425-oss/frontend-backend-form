@@ -6,14 +6,14 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
-                 sh "pwd: ${pwd()}"
+                 echo "pwd: ${pwd()}"
             }
         }
 
         stage('Install Dependencies') {
             steps {
                 dir('frontend') {
-                    sh "pwd: ${pwd()}"
+                    echo "pwd: ${pwd()}"
                     sh 'npm install'
                 }
             }
