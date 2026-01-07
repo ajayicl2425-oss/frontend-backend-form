@@ -14,7 +14,7 @@ pipeline {
             steps {
                 dir('frontend') {
                     echo "pwd: ${pwd()}"
-                   sh 'npm install -r requirements.txt'
+                     sh 'npm install -r requirements.txt'
                 }
             }
         }
