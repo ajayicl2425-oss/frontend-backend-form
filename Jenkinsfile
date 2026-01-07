@@ -4,26 +4,27 @@ pipeline {
     stages {
 
         stage('Checkout') {
-          steps {
-            checkout scm
-                }
-           }
+            steps {
+                checkout scm
+                 sh 'pwd: ${pwd()}'
+            }
+        }
 
         stage('Install Dependencies') {
             steps {
                 dir('frontend') {
-                    sh 'cd frontend'
+                    sh 'pwd: ${pwd()}'
                     sh 'npm install'
                 }
             }
         }
 
-        stage('app start') {
+        stage('App Start') {
             steps {
+                dir('frontend') {
                     sh 'npm start'
                 }
             }
         }
-
-        
+    }
 }
